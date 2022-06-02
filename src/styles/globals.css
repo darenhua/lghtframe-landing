@@ -116,3 +116,11 @@
     background-size: 0 2px, 100% 2px;
   }
 }
+
+@layer components {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}

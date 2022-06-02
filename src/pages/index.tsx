@@ -1,20 +1,15 @@
+import Image from 'next/image';
 import * as React from 'react';
 
+import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 
 /**
  * SVGR Support
  * Caveat: No React Props Type.
  *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
-import Vercel from '~/svg/Vercel.svg';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -25,50 +20,170 @@ export default function HomePage() {
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
-
-      <main>
-        <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
-            <Vercel className='text-5xl' />
-            <h1 className='mt-4'>
-              Next.js + Tailwind CSS + TypeScript Starter
-            </h1>
-            <p className='mt-2 text-sm text-gray-800'>
-              A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-              Import, Seo, Link component, pre-configured with Husky{' '}
-            </p>
-            <p className='mt-2 text-sm text-gray-700'>
-              <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-                See the repository
-              </ArrowLink>
-            </p>
-
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
-
-            <UnstyledLink
-              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-              className='mt-4'
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                width='92'
-                height='32'
-                src='https://vercel.com/button'
-                alt='Deploy with Vercel'
-              />
-            </UnstyledLink>
-
-            <footer className='absolute bottom-2 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-                Theodorus Clarence
-              </UnderlineLink>
-            </footer>
-          </div>
-        </section>
-      </main>
+      <div className='px-20'>
+        <div className='mx-auto w-full max-w-7xl'>
+          <main>
+            <section className='my-20 mb-40'>
+              <article className='flex items-center'>
+                <div className='w-7/12'>
+                  <h1 className='text-6xl tracking-tight'>
+                    We have the solution to your problem.
+                  </h1>
+                  <div className='mt-6 mb-8 max-w-lg'>
+                    <p className='text-xl'>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Dolores dicta ad suscipit dolor mollitia quod iste illo id
+                      sunt ab perspiciatis numquam.
+                    </p>
+                  </div>
+                  <div className='flex flex-wrap gap-6'>
+                    <Button variant='primary' className='text-lg'>
+                      Explore our houses
+                    </Button>
+                    <Button variant='outline' className='text-lg'>
+                      Sign up now
+                    </Button>
+                  </div>
+                </div>
+                <div className='w-5/12'>
+                  <div className='max-w-md'>
+                    <Image
+                      src='/images/download.png'
+                      alt='placeholder'
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                </div>
+              </article>
+            </section>
+            <section className='my-20 mb-40'>
+              <div className='relative flex justify-center text-center'>
+                <div className='max-w-xl pt-12'>
+                  <h2 className='text-5xl'>
+                    We eliminate plastic waste and build houses
+                  </h2>
+                  <div className='mt-8 '>
+                    <p className='text-xl'>Supported by Harvard E-Labs</p>
+                  </div>
+                  <div className='mt-8 mb-12'>
+                    <Image
+                      src='/images/download.png'
+                      alt='placeholder'
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                </div>
+                <div className='absolute top-6 left-0 -translate-x-20'>
+                  <Image
+                    src='/images/download.png'
+                    alt='placeholder'
+                    width={200}
+                    height={200}
+                  />
+                </div>
+                <div className='absolute top-6 right-0 translate-x-20'>
+                  <Image
+                    src='/images/download.png'
+                    alt='placeholder'
+                    width={200}
+                    height={200}
+                  />
+                </div>
+              </div>
+            </section>
+            <section className='my-20 mb-40'>
+              <div className='flex items-center'>
+                <div className='w-6/12'>
+                  <h2 className='text-5xl'>Introducing: Plasteel</h2>
+                  <div className='mt-8 max-w-md'>
+                    <p className='text-xl'>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Amet fuga perspiciatis tempore rem non quibusdam velit,
+                      magni accusantium in corrupti, dignissimos sunt ut
+                      blanditiis, voluptatem omnis eius dolores recusandae
+                      doloribus.
+                    </p>
+                  </div>
+                </div>
+                <div className='flex w-6/12 justify-center'>
+                  <div className='max-w-md'>
+                    <Image
+                      src='/images/download.png'
+                      alt='placeholder'
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className='my-20 mb-40 text-right'>
+              <div className='flex flex-row-reverse items-center'>
+                <div className='w-6/12'>
+                  <h2 className='text-5xl'>Introducing: Plasteel</h2>
+                  <div className='mr-0 ml-auto mt-8 max-w-md'>
+                    <p className='text-xl'>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Amet fuga perspiciatis tempore rem non quibusdam velit,
+                      magni accusantium in corrupti, dignissimos sunt ut
+                      blanditiis, voluptatem omnis eius dolores recusandae
+                      doloribus.
+                    </p>
+                  </div>
+                </div>
+                <div className='flex w-6/12 justify-center'>
+                  <div className='max-w-md'>
+                    <Image
+                      src='/images/download.png'
+                      alt='placeholder'
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className='my-20 mb-40'>
+              <div className='flex items-center'>
+                <div className='w-6/12'>
+                  <h2 className='text-5xl'>Introducing: Plasteel</h2>
+                  <div className='mt-8 max-w-md'>
+                    <p className='text-xl'>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Amet fuga perspiciatis tempore rem non quibusdam velit,
+                      magni accusantium in corrupti, dignissimos sunt ut
+                      blanditiis, voluptatem omnis eius dolores recusandae
+                      doloribus.
+                    </p>
+                  </div>
+                </div>
+                <div className='flex w-6/12 justify-center'>
+                  <div className='max-w-md'>
+                    <Image
+                      src='/images/download.png'
+                      alt='placeholder'
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className='my-20'>
+              <div className='mx-auto flex max-w-2xl flex-col items-center rounded-2xl border-4 border-slate-200 px-20 py-6'>
+                <h2 className='text-4xl'>Interested? Sign up now!</h2>
+                <div className='mt-4'>
+                  <Button variant='primary' className='text-lg'>
+                    Sign up now
+                  </Button>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
     </Layout>
   );
 }
