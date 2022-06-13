@@ -3,15 +3,23 @@ import * as React from 'react';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
 const links = [
-  { href: '/', label: 'Route 1' },
-  { href: '/', label: 'Route 2' },
+  { href: '/', label: 'About' },
+  { href: '/', label: 'Contact' },
 ];
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 border-b-2 border-solid border-slate-200 bg-white'>
+    <header className='sticky top-0 z-50 w-screen border-b-2 border-solid border-slate-200 bg-white'>
       <div className='layout flex h-14 items-center justify-between'>
         <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
+          {/* <div className="max-w">
+          <Image
+            src='/images/download.png'
+            alt='placeholder'
+            width={50}
+            height={50}
+          />
+        </div> */}
           Home
         </UnstyledLink>
         <nav>
