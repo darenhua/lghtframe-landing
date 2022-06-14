@@ -20,7 +20,7 @@ export default function ValueProp() {
             />
           </div>
         </div>
-        <div className='absolute left-0 -translate-x-20 md:top-24 md:w-40 lg:w-52 xl:w-56'>
+        <div className='absolute left-0 top-24 w-32 -translate-x-20 lg:top-0 lg:w-52 xl:w-56'>
           <Image
             src='/images/download.png'
             alt='placeholder'
@@ -28,7 +28,7 @@ export default function ValueProp() {
             height={500}
           />
         </div>
-        <div className='absolute right-0 translate-x-20 md:top-24 md:w-40 lg:w-52 xl:w-56'>
+        <div className='absolute right-0 top-24 w-32 translate-x-20 lg:top-0 lg:w-52 xl:w-56'>
           <Image
             src='/images/download.png'
             alt='placeholder'
