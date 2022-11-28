@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import * as React from 'react';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
@@ -9,18 +10,18 @@ const links = [
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 w-screen border-b-2 border-solid border-slate-200 bg-white'>
-      <div className='layout flex h-14 items-center justify-between'>
+    <header className='sticky top-0 z-50 h-20 w-screen bg-white bg-opacity-80 py-6 transition-all hover:bg-opacity-100'>
+      <div className='layout flex h-full items-center justify-between'>
         <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
-          {/* <div className="max-w">
-          <Image
-            src='/images/download.png'
-            alt='placeholder'
-            width={50}
-            height={50}
-          />
-        </div> */}
-          Home
+          <div className='w-24'>
+            <Image
+              src='/svg/colorlogo.svg'
+              alt='placeholder'
+              layout='intrinsic'
+              width={250}
+              height={150}
+            />
+          </div>
         </UnstyledLink>
         <nav>
           <ul className='flex items-center justify-between space-x-4'>

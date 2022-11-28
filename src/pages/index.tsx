@@ -18,14 +18,16 @@ export default function HomePage() {
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
-      <div className='px-20'>
+      <div className=''>
         <div className='mx-auto w-full max-w-7xl'>
           <main>
             <Hero />
             <ValueProp />
-            <ProductSection />
-            <ProductSection right />
-            <ProductSection />
+            <ProductSection imageUsed={0} />
+            <ProductSection right imageUsed={1} />
+            <ProductSection right imageUsed={2} />
+            <ProductSection right imageUsed={3} />
+            <ProductSection imageUsed={4} />
             <CallToAction />
           </main>
         </div>

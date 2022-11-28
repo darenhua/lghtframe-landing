@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+// const { fontFamily } = require('@/fonts/Actor-Regular.ttf');
 
 function withOpacityValue(variable) {
   return ({ opacityValue }) => {
@@ -12,6 +13,7 @@ function withOpacityValue(variable) {
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
+  mode: 'jit',
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
@@ -33,6 +35,9 @@ module.exports = {
           900: withOpacityValue('--tw-color-primary-900'),
         },
         dark: '#222222',
+        lghtcolordark: '#C5BCE1',
+        lghtcolorlight: '#edeff8',
+        lghtcolorsky: '#f7fdff',
       },
       keyframes: {
         flicker: {

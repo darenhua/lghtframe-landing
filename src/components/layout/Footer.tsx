@@ -1,84 +1,53 @@
 import Image from 'next/image';
 
-import Button from '@/components/buttons/Button';
+import UnderlineLink from '@/components/links/UnderlineLink';
 
 export default function Footer() {
+  const links = [
+    { href: '/', label: 'Explore Houses' },
+    { href: '/', label: 'About LGHTFrame' },
+    { href: '/', label: 'Contact Us' },
+  ];
+
   return (
-    <footer className='border-t-2 border-solid border-slate-200 bg-white pt-28 pb-16'>
-      <div className='sm:px-8 md:px-20'>
-        <div className='mx-auto w-full max-w-7xl'>
-          <nav className='flex'>
-            <div className='md:w-3/12 lg:w-4/12'>
-              <div className='flex items-center'>
-                <div className='mr-4 hidden sm:block'>
-                  <Image
-                    src='/images/download.png'
-                    alt='placeholder'
-                    width={60}
-                    height={60}
-                  />
-                </div>
-                <h2 className='md:text-2xl lg:text-3xl'>LGHTFRAME</h2>
-              </div>
-              <div className='md:text-md my-2 lg:text-xl'>
-                <p>Sign up for our newsletter below.</p>
-              </div>
-              <div className='mt-6'>
-                <form action=''>
-                  <input type='email' className='w-24 md:w-36 lg:w-48' />
-                  <Button className='mt-4 lg:ml-1 lg:mt-0' type='submit'>
-                    Submit
-                  </Button>
-                </form>
-              </div>
-            </div>
-            <div className='md:text-md flex md:w-9/12 lg:w-8/12 lg:text-lg'>
-              <div className='w-1/3'>
-                <h3 className='mx-auto mb-8 w-32 '>Section 1</h3>
-                <ul className=''>
-                  <li className='mx-auto mb-6 w-32 '>
-                    <a href=''>Link 1</a>
-                  </li>
-                  <li className='mx-auto mb-6 w-32'>
-                    <a href=''>Link 2</a>
-                  </li>
-                  <li className='mx-auto mb-6 w-32'>
-                    <a href=''>Link 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div className='w-1/3'>
-                <h3 className='mx-auto mb-8 w-32'>Section 2</h3>
-                <ul className=''>
-                  <li className='mx-auto mb-6 w-32 '>
-                    <a href=''>Link 4</a>
-                  </li>
-                  <li className='mx-auto mb-6 w-32'>
-                    <a href=''>Link 5</a>
-                  </li>
-                  <li className='mx-auto mb-6 w-32'>
-                    <a href=''>Link 6</a>
-                  </li>
-                </ul>
-              </div>
-              <div className='w-1/3'>
-                <h3 className='mx-auto mb-8 w-32'>Section 3</h3>
-                <ul className=''>
-                  <li className='mx-auto mb-6 w-32 '>
-                    <a href=''>Link 6</a>
-                  </li>
-                  <li className='mx-auto mb-6 w-32'>
-                    <a href=''>Link 7</a>
-                  </li>
-                  <li className='mx-auto mb-6 w-32'>
-                    <a href=''>Link 8</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+    <footer className='flex h-fit w-screen flex-col items-center bg-slate-100 pt-20 lg:h-80'>
+      <div className='flex h-full w-9/12 flex-col lg:flex-row '>
+        <div className='h-full w-44 sm:w-4/12'>
+          <div className='w-32'>
+            <Image
+              src='/svg/colorlogo.svg'
+              alt='placeholder'
+              layout='intrinsic'
+              width={250}
+              height={150}
+            />
+          </div>
+          <p className='text-2xl'>Contact us at </p>
+          <p className='text-2xl font-bold'>info@lghtframe.com</p>
+        </div>
+        <div className='ml:0 lg:mt:0 mt-8 h-full w-44 sm:w-4/12 lg:ml-10'>
+          <h3 className='mb-6 hidden lg:block'>Learn More</h3>
+          <ul className='text-lg'>
+            {links.map(({ href, label }) => (
+              <li key={`${href}${label}`} className='mb-2'>
+                <UnderlineLink href={href} className='hover:text-gray-600'>
+                  {label}
+                </UnderlineLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className='relative h-full w-4/12 min-w-[200px] max-w-sm translate-y-24 self-center sm:min-w-[320px] lg:translate-y-0'>
+          <Image
+            src='/images/footerimage.png'
+            alt='placeholder'
+            layout='responsive'
+            width={1700}
+            height={1719}
+          />
         </div>
       </div>
+      <div className='h-12 min-w-full bg-slate-200 p-16 lg:p-20'></div>
     </footer>
   );
 }

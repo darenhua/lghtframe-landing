@@ -1,40 +1,55 @@
 import Image from 'next/image';
 
+import OutsideLink from '@/components/links/UnderlineLink';
+
 export default function ValueProp() {
   return (
-    <section className='my-20 mb-40'>
-      <div className='relative flex justify-center text-center'>
-        <div className='pt-12'>
-          <h2 className='md:max-w-lg md:text-4xl lg:max-w-xl lg:text-5xl'>
-            We eliminate plastic waste and build houses
-          </h2>
-          <div className='md:mt-6 lg:mt-8'>
-            <p className='text-xl'>Supported by Harvard E-Labs</p>
+    <section className='mb-20 bg-lghtcolorlight pt-20'>
+      <div className='flex justify-center'>
+        <div className='flex flex-col items-center pt-12'>
+          <div className='inline-flex items-center text-xl text-lghtcolordark'>
+            <h3 className='mr-2'>Supported by</h3>
+            <div className='inline-flex items-center'>
+              <Image
+                src='/images/avatars-000220355343-echc6t-original.jpg'
+                alt='placeholder'
+                width={25}
+                height={25}
+              />
+              <h3 className='ml-2'>
+                <OutsideLink
+                  href='https://innovationlabs.harvard.edu/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Harvard Innovation Labs
+                </OutsideLink>
+              </h3>
+            </div>
           </div>
-          <div className='mb-12 md:mt-6 lg:mt-8'>
-            <Image
-              src='/images/download.png'
-              alt='placeholder'
-              width={100}
-              height={100}
-            />
+          <div className='flex items-center pt-20'>
+            <div className='flex w-6/12 flex-col items-center'>
+              <h2 className='header-background max-w-md text-5xl'>
+                A more efficient structural system.
+              </h2>
+              <div className='mt-8 max-w-md'>
+                <p className='md:text-lg lg:text-xl'>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                  fuga perspiciatis tempore rem non quibusdam velit, magni
+                  accusantium in corrupti, dignissimos sunt ut blanditiis,
+                  voluptatem omnis eius dolores recusandae doloribus.
+                </p>
+              </div>
+            </div>
+            <div className='w-6/12'>
+              <Image
+                src='/images/Capture_2 1.png'
+                alt='placeholder'
+                width={979.5}
+                height={750}
+              />
+            </div>
           </div>
-        </div>
-        <div className='absolute left-0 top-24 w-32 -translate-x-20 lg:top-0 lg:w-52 xl:w-56'>
-          <Image
-            src='/images/download.png'
-            alt='placeholder'
-            width={500}
-            height={500}
-          />
-        </div>
-        <div className='absolute right-0 top-24 w-32 translate-x-20 lg:top-0 lg:w-52 xl:w-56'>
-          <Image
-            src='/images/download.png'
-            alt='placeholder'
-            width={500}
-            height={500}
-          />
         </div>
       </div>
     </section>
