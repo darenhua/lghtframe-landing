@@ -60,7 +60,7 @@ export default function ProductSection({
             right && !isMiddle ? 'md:pl-8' : 'md:pr:8'
           )}
         >
-          <h2 className='header-background mt-8 text-center text-4xl md:mt-0 md:text-left md:text-3xl lg:text-5xl xl:text-6xl'>
+          <h2 className='header-background mt-8 text-center text-2xl xxs:text-3xl xs:text-4xl md:mt-0 md:text-left md:text-5xl  lg:text-5xl  xl:text-6xl '>
             {headerText}
           </h2>
           <div
@@ -83,7 +83,7 @@ export default function ProductSection({
           <div
             className={clsxm(
               'flex w-8/12 justify-center md:w-64 lg:w-72',
-              isMiddle ? 'md:w-10/12 lg:w-10/12 xl:w-10/12' : 'xl:w-8/12'
+              isMiddle ? 'w-full md:w-10/12 lg:w-10/12 xl:w-10/12' : 'xl:w-8/12'
             )}
           >
             <Image

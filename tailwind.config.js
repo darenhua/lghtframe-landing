@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily, screens } = require('tailwindcss/defaultTheme');
 // const { fontFamily } = require('@/fonts/Actor-Regular.ttf');
 
 function withOpacityValue(variable) {
@@ -15,7 +15,13 @@ function withOpacityValue(variable) {
 module.exports = {
   mode: 'jit',
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+
   theme: {
+    screens: {
+      xxs: '375px',
+      xs: '475px',
+      ...screens,
+    },
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
