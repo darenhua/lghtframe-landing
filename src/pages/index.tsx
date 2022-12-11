@@ -7,27 +7,47 @@ import ValueProp from '@/components/layout/home/ValueProp';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- */
-
 export default function HomePage() {
+  const textContent = [
+    {
+      heading: 'Introducing: The L*ght FRAME',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fuga perspiciatis tempore rem non quibusdam velit, magni accusantium in corrupti, dignissimos sunt ut blanditiis, voluptatem omnis eius dolores recusandae doloribus.',
+    },
+    {
+      heading: 'Framing',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fuga perspiciatis tempore rem non quibusdam velit, magni accusantium in corrupti, dignissimos sunt ut blanditiis, voluptatem omnis eius dolores recusandae doloribus.',
+    },
+    {
+      heading: 'Sheething',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fuga perspiciatis tempore rem non quibusdam velit, magni accusantium in corrupti, dignissimos sunt ut blanditiis, voluptatem omnis eius dolores recusandae doloribus.',
+    },
+    {
+      heading: 'N-E Space',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fuga perspiciatis tempore rem non quibusdam velit, magni accusantium in corrupti, dignissimos sunt ut blanditiis, voluptatem omnis eius dolores recusandae doloribus.',
+    },
+    {
+      heading: 'L*ght House',
+      body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fuga perspiciatis tempore rem non quibusdam velit, magni accusantium in corrupti, dignissimos sunt ut blanditiis, voluptatem omnis eius dolores recusandae doloribus.',
+    },
+  ];
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
       <div className=''>
-        <div className='mx-auto w-full max-w-7xl'>
+        <div className='mx-auto w-full'>
           <main>
             <Hero />
             <ValueProp />
-            <ProductSection imageUsed={0} />
-            <ProductSection right imageUsed={1} />
-            <ProductSection right imageUsed={2} />
-            <ProductSection right imageUsed={3} />
-            <ProductSection imageUsed={4} />
+            {textContent.map((text, index) => (
+              <ProductSection
+                key={index}
+                imageUsed={index}
+                right={index > 0 && index < 4}
+                bodyText={text.body}
+                headerText={text.heading}
+              />
+            ))}
             <CallToAction />
           </main>
         </div>

@@ -132,10 +132,26 @@
     margin: 0;
     padding: 0;
   }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
   html {
     background-color: #f7fdff;
   }
+
+  body {
+    overflow-y: scroll;
+    width: 100%;
+  }
+
   .header-background {
-    @apply bg-lghtcolordark py-4 px-8 tracking-tight text-white;
+    @apply border-4 border-slate-200 bg-lghtcolordark py-4 px-8 tracking-tight text-white;
   }
 }

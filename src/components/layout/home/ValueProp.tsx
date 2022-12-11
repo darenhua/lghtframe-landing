@@ -27,13 +27,13 @@ export default function ValueProp() {
               </h3>
             </div>
           </div>
-          <div className='flex items-center pt-20'>
-            <div className='flex w-6/12 flex-col items-center'>
-              <h2 className='header-background max-w-md text-5xl'>
+          <div className='  flex flex-col items-center pt-20 md:flex-row'>
+            <div className='flex w-9/12 flex-col  items-center pl-10 pr-8 md:w-6/12 md:items-start lg:pr-0'>
+              <h2 className='header-background max-w-md text-center text-4xl md:text-left md:text-3xl lg:max-w-xl lg:text-5xl xl:text-6xl'>
                 A more efficient structural system.
               </h2>
-              <div className='mt-8 max-w-md'>
-                <p className='md:text-lg lg:text-xl'>
+              <div className='mt-8 md:max-w-lg'>
+                <p className='pb-8 text-center md:pb-4 md:text-left md:text-lg lg:text-xl'>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
                   fuga perspiciatis tempore rem non quibusdam velit, magni
                   accusantium in corrupti, dignissimos sunt ut blanditiis,

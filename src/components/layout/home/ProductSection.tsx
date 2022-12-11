@@ -5,9 +5,16 @@ import clsxm from '@/lib/clsxm';
 interface Props {
   right?: boolean;
   imageUsed: number;
+  headerText: string;
+  bodyText: string;
 }
 
-export default function ProductSection({ right, imageUsed }: Props) {
+export default function ProductSection({
+  right,
+  imageUsed,
+  headerText,
+  bodyText,
+}: Props) {
   const urls = [
     '/images/Enscape_2022-08-06-09-16-37_1-removebg-preview.png',
     '/images/Enscape_2022-08-06-10-08-42_2-removebg-preview.png',
@@ -39,34 +46,44 @@ export default function ProductSection({ right, imageUsed }: Props) {
   ];
   const isMiddle = imageUsed === 1 || imageUsed === 2;
   return (
-    <section className='my-20 mb-40 px-20'>
-      <div className={clsxm('flex items-center', right && 'flex-row-reverse ')}>
+    <section className='my-20 mb-40 px-4 sm:px-20'>
+      <div
+        className={clsxm(
+          'flex flex-col-reverse items-center md:flex-row',
+          right && 'md:flex-row-reverse'
+        )}
+      >
         <div
           className={clsxm(
-            isMiddle ? 'w-4/12' : 'w-6/12',
-            right ? 'pl-8' : 'pr:8'
+            'w-10/12',
+            isMiddle ? 'md:w-4/12' : 'md:w-6/12',
+            right && !isMiddle ? 'md:pl-8' : 'md:pr:8'
           )}
         >
-          <h2 className='header-background text-5xl'>Introducing: Plasteel</h2>
-          <div className={clsxm('mt-8 ml-6 max-w-md', right && 'mr-6 ml-auto')}>
-            <p className='md:text-lg lg:text-xl'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-              fuga perspiciatis tempore rem non quibusdam velit, magni
-              accusantium in corrupti, dignissimos sunt ut blanditiis,
-              voluptatem omnis eius dolores recusandae doloribus.
+          <h2 className='header-background mt-8 text-center text-4xl md:mt-0 md:text-left md:text-3xl lg:text-5xl xl:text-6xl'>
+            {headerText}
+          </h2>
+          <div
+            className={clsxm(
+              'mt-8 max-w-md md:ml-6 lg:max-w-xl xl:max-w-full',
+              right && 'ml-auto md:mr-6'
+            )}
+          >
+            <p className='max-w-md text-center md:text-left lg:max-w-xl lg:text-xl xl:max-w-full'>
+              {bodyText}
             </p>
           </div>
         </div>
         <div
           className={clsxm(
-            'flex  justify-center',
-            isMiddle ? 'w-8/12 justify-start' : 'w-6/12'
+            'flex justify-center',
+            isMiddle ? 'justify-center md:w-8/12' : 'md:w-6/12'
           )}
         >
           <div
             className={clsxm(
-              'w-48 md:w-64 lg:w-72',
-              isMiddle ? 'xl:w-10/12' : 'xl:w-8/12'
+              'flex w-8/12 justify-center md:w-64 lg:w-72',
+              isMiddle ? 'md:w-10/12 lg:w-10/12 xl:w-10/12' : 'xl:w-8/12'
             )}
           >
             <Image
