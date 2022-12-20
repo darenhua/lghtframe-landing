@@ -30,10 +30,16 @@ export default function HomePage() {
       body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fuga perspiciatis tempore rem non quibusdam velit, magni accusantium in corrupti, dignissimos sunt ut blanditiis, voluptatem omnis eius dolores recusandae doloribus.',
     },
   ];
+  const homeMeta = {
+    templateTitle: 'Home',
+    date: '12/11/2022',
+    description:
+      'Lghtframe is building a new sustainable housing system. Learn more about LGHTFrame, and join the next generation of housing!',
+  };
   return (
     <Layout>
-      {/* <Seo templateTitle='Home' /> */}
-      <Seo />
+      <Seo {...homeMeta} />
+      {/* <Seo /> */}
       <div className=''>
         <div className='mx-auto w-full'>
           <main>

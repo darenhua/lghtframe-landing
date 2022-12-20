@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import Button from '@/components/buttons/Button';
+import ButtonLink from '@/components/links/ButtonLink';
 
 // import CanvasVis from '@/components/HeroCanvas';
 
@@ -20,8 +20,12 @@ export default function Hero() {
             </p>
           </div>
           <div className='flex flex-wrap justify-center gap-3  md:justify-start lg:gap-6'>
-            <Button variant='outline'>Explore our houses</Button>
-            <Button variant='primary'>Talk to us today</Button>
+            {/* <ButtonLink href='/' variant='outline'>
+              Explore our houses
+            </ButtonLink> */}
+            <ButtonLink href='/contact' variant='primary'>
+              Talk to us today
+            </ButtonLink>
           </div>
         </div>
         <div className='w-full xxs:w-10/12 xs:w-8/12 md:w-6/12'>

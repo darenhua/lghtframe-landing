@@ -5,7 +5,7 @@ import { openGraph } from '@/lib/helper';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'LGHTFrame - Home',
+  title: 'LGHTFrame',
   siteName: 'LGHTFrame',
   description: 'Lghtframe is building a new sustainable housing system',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */

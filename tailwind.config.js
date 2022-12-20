@@ -20,6 +20,7 @@ module.exports = {
     screens: {
       xxs: '375px',
       xs: '475px',
+      compsm: '575px',
       ...screens,
     },
     extend: {
@@ -42,6 +43,9 @@ module.exports = {
         },
         dark: '#222222',
         lghtcolordark: '#C5BCE1',
+        lghtpurple: '#6c04fb',
+        lghtgreen: '#ace229',
+        lghtgrey: '#E7E7E7',
         lghtcolorlight: '#edeff8',
         lghtcolorsky: '#f7fdff',
       },

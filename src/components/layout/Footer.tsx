@@ -5,8 +5,8 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 export default function Footer() {
   const links = [
     { href: '/', label: 'Explore Houses' },
-    { href: '/', label: 'About LGHTFrame' },
-    { href: '/', label: 'Contact Us' },
+    { href: '/about', label: 'About LGHTFrame' },
+    { href: '/contact', label: 'Contact Us' },
   ];
 
   return (
